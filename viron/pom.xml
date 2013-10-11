@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>viron</groupId>
   <artifactId>viron</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.1</version>
   <packaging>pom</packaging>
   <name>viron</name>
   <description>viron</description>
@@ -12,4 +12,51 @@
   	<module>data-access</module>
   	<module>services</module>
   </modules>
+  <properties>
+		<postgres.version>9.1-901.jdbc4</postgres.version>
+		<eclipselink.version>2.4.0</eclipselink.version>
+		<javaee.version>6.0</javaee.version>
+		<junit.version>4.11</junit.version>
+		<org.json.version>20090211</org.json.version>
+		<viron.version>0.1</viron.version>
+		<viron.dataaccess.version>0.1</viron.dataaccess.version>
+		<viron.services.version>0.1</viron.services.version>
+		<viron.bets.version>0.1</viron.bets.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>${javaee.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>${org.json.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.1</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
